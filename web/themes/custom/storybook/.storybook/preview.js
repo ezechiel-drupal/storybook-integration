@@ -1,6 +1,6 @@
 /** @type { import('@storybook/react').Preview } */
-import Twig from "twig";
-import drupalFilters from "twig-drupal-filters";
+import Twig from 'twig';
+import drupalFilters from 'twig-drupal-filters';
 
 function setupFilters(twig) {
   twig.cache();

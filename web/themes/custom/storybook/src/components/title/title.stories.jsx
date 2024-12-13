@@ -2,14 +2,14 @@
  * First we import the `html-react-parser` extension to be able to
  * parse HTML into react.
  */
-import parse from "html-react-parser";
+import parse from 'html-react-parser';
 
 /**
  * Next we import the component's markup and logic (twig), data schema (yml),
  * as well as any styles or JS the component may use.
  */
-import title from "./title.twig";
-import data from "./title.yml";
+import title from './title.twig';
+import data from './title.yml';
 
 /**
  * Next we define a default configuration for the component to use.
@@ -21,9 +21,7 @@ import data from "./title.yml";
  * `args` uses the variables defined in title.yml as react arguments.
  */
 const component = {
-  title: "Components/Title",
-  render: (args) => parse(title(args)),
-  args: { ...data },
+  title: 'Components/Title',
 };
 
 /**
@@ -32,7 +30,9 @@ const component = {
  * For example: `Title`, `Title dark`, `Title light`, etc.
  */
 export const TitleElement = {
-  name: "Title",
+  name: 'Title',
+  render: (args) => parse(title(args)),
+  args: { ...data },
 };
 
 /**

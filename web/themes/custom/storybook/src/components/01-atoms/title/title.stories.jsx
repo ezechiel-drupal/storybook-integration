@@ -1,33 +1,32 @@
 /**
- * First we import the `html-react-parser` extension to be able to
- * parse HTML into react.
+ * Tout d'abord, nous importons l'extension html-react-parser afin de pouvoir
+ * analyser le code HTML et le convertir en React.
  */
 import parse from "html-react-parser";
 
 /**
- * Next we import the component's markup and logic (twig), data schema (yml),
- * as well as any styles or JS the component may use.
+ * Ensuite, nous importons le balisage et la logique (Twig) du composant, le schéma de données (YML),
+ * ainsi que tous les styles ou fichiers JS que le composant peut utiliser.
  */
 import title from "./title.twig";
 import data from "./title.yml";
 
 /**
- * Next we define a default configuration for the component to use.
- * These settings will be inherited by all stories of the component,
- * shall the component have multiple variations.
- * `component` is an arbitrary name assigned to the default configuration.
- * `title` determines the location and name of the story in Storybook's sidebar.
- * `render` uses the parser extension to render the component's html to react.
- * `args` uses the variables defined in title.yml as react arguments.
+ * Ensuite, nous définissons une configuration par défaut à utiliser pour le composant.
+ * Ces paramètres seront hérités par toutes les stories du composant, si celui-ci dispose de plusieurs variations.
+ * `component` est un nom arbitraire attribué à la configuration par défaut.
+ * `title` détermine l'emplacement et le nom de la story dans la barre latérale de Storybook.
+ * `render` utilise l'extension du parser pour convertir le HTML du composant en React.
+ * `args` utilise les variables définies dans le fichier title.yml en tant qu'arguments React.
  */
 const component = {
   title: "Atoms/Title",
 };
 
 /**
- * Export the Title and render it in Storybook as a Story.
- * The `name` key allows you to assign a name to each story of the component.
- * For example: `Title`, `Title dark`, `Title light`, etc.
+ * Exportez le composant Title et affichez-le dans Storybook en tant que Story.
+ * La clé `name` permet d'attribuer un nom à chaque story du composant.
+ * Par exemple: `Title`, `Title dark`, `Title light`, etc.
  */
 export const TitleElement = {
   name: "Title",
@@ -36,6 +35,6 @@ export const TitleElement = {
 };
 
 /**
- * Finally export the default object, `component`. Storybook/React requires this step.
+ * Enfin, exportez l'objet par défaut, `component`. Storybook/React nécessite cette étape.
  */
 export default component;
